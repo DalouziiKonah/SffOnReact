@@ -60,6 +60,7 @@ function Gallery({GalleryConfig}) {
             key={item.id} 
             className={`gallery-item ${item.featured ? 'featured' : ''}`}
             onClick={() => openLightbox(index)}
+            data-aos={"animationType"}
           >
             <img 
               src={item.imageUrl} 

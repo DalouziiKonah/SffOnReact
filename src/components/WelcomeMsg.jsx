@@ -8,7 +8,8 @@ const WelcomeMsg = ({ messages }) => {
       duration: 1000,
       easing: 'ease-in-out',
       offset: 200,
-      once: true,
+      once: false,
+      mirror: true,
     });
   }, []);
 
