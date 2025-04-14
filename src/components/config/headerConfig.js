@@ -3,7 +3,7 @@
 export const headerConfig = {
   brand: {
     imgURL: "/src/assets/logo.svg",
-    name: "SFS HR.Sec School Daili Kangpokpi",
+    name: "SFS HR.Secondary School Daili Kangpokpi",
   },
   navItems: {
     main: [

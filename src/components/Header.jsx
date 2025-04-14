@@ -16,7 +16,7 @@ function Header() {
           </a>
         </div>
          
-          <a className="navbar-brand text-uppercase text-center text-md-start w-100" href="index.html">{brand.name}</a>
+          <a className="navbar-brand text-uppercase text-center text-md w-100" href="index.html">{brand.name}</a>
           
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
             <span className="navbar-toggler-icon"></span>
