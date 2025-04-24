@@ -1,6 +1,6 @@
 const WelcomeConfig = [
   {
-    title: "Welcome to SFS School Daili Village Kangpokpi!",
+    title: "From the Principal",
     message:
       "We're thrilled to welcome you. Our goal is to build a nurturing environment where excellence thrives and students grow holistically. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     author: "Principal",

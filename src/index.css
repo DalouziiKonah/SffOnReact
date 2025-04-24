@@ -428,7 +428,7 @@ width: 100%;
 /* Lightbox Styles */
 .lightbox {
   position: fixed;
-  top: 120px;
+  top: 100px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -487,4 +487,31 @@ width: 100%;
 /* Check the layout with the outline.*/
 /* *{
   outline: 2px solid red;
-} */
+}  */
+ /* AboutUs.css */
+ .object-fit-cover {
+  object-fit: cover;
+  width: 100%;
+}
+/* staff peek card */
+/* Add to your stylesheet */
+.peek-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  border-radius: 0 0 0.375rem 0.375rem;
+}
+
+.card:hover .peek-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    transparent 100%
+  );
+}
+/*curriculum*/

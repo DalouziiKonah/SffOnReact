@@ -7,9 +7,9 @@ const WelcomeMsg = ({ messages }) => {
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
-      offset: window.innerWidth < 768 ? 0 : 200,
-      once: false,
-      mirror:true,
+      offset:400,
+      once: true,
+      // mirror:true,
     });
   }, []);
 

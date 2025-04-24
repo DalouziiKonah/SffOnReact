@@ -1,4 +1,11 @@
 // src/data/footerData.js
+const establishmentYear = 2000; // Change this to your school's founding year
+const currentYear = new Date().getFullYear();
+const copyrightYear =
+  currentYear > establishmentYear
+    ? `${establishmentYear}-${currentYear}`
+    : `${currentYear}`;
+
 export const footerData = {
   contactInfo: {
     schoolName: "SFS Higher Secondary School",
@@ -18,5 +25,5 @@ export const footerData = {
     { platform: "Instagram", url: "#", icon: "instagram" },
     { platform: "LinkedIn", url: "#", icon: "linkedin" },
   ],
-  copyright: "© 2025 SFS Higher Secondary School. All rights reserved.",
+  copyright: `© ${copyrightYear} SFS Higher Secondary School. All rights reserved.`,
 };

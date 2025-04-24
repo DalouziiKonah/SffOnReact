@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "bootstrap": "^5.3.5",
+    "bootstrap-icons": "^1.11.3",
+    "react": "^19.1.0",
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

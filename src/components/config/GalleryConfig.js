@@ -27,6 +27,30 @@ const GalleryConfig = {
       description: "Teacher's day special",
       category: "Teacher's day",
     },
+    {
+      id: 4,
+      imageUrl:
+        "https://media.istockphoto.com/id/1269599466/photo/happy-teachers-day-written-on-slate-board-with-white-chalk-pieces-isolated-on-black.jpg?s=612x612&w=0&k=20&c=2-w40V0b5x0mTDpABw7j6HFRqsJxX3tE5p_z-KqBtK8=",
+      title: "Teacher's day",
+      description: "Teacher's day special",
+      category: "Teacher's day",
+    },
+    {
+      id: 5,
+      imageUrl:
+        "https://media.istockphoto.com/id/1269599466/photo/happy-teachers-day-written-on-slate-board-with-white-chalk-pieces-isolated-on-black.jpg?s=612x612&w=0&k=20&c=2-w40V0b5x0mTDpABw7j6HFRqsJxX3tE5p_z-KqBtK8=",
+      title: "Teacher's day",
+      description: "Teacher's day special",
+      category: "Teacher's day",
+    },
+    {
+      id: 6,
+      imageUrl:
+        "https://media.istockphoto.com/id/1269599466/photo/happy-teachers-day-written-on-slate-board-with-white-chalk-pieces-isolated-on-black.jpg?s=612x612&w=0&k=20&c=2-w40V0b5x0mTDpABw7j6HFRqsJxX3tE5p_z-KqBtK8=",
+      title: "Teacher's day",
+      description: "Teacher's day special",
+      category: "Teacher's day",
+    },
     // Add more items as needed
   ],
   layout: {
