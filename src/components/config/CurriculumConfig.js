@@ -60,7 +60,6 @@ const curriculumData = {
         ],
         specialPrograms: "Math Olympiad Prep, Storytelling",
       },
-      // Grades 3-5 would follow similar structure
     ],
   },
 
@@ -78,7 +77,6 @@ const curriculumData = {
         ],
         electives: ["Computer Applications", "Art", "Music", "Drama"],
       },
-      // Grades 7-8 would follow similar structure
     ],
   },
 
@@ -143,48 +141,53 @@ const curriculumData = {
             "Mathematics/Computer Science",
           ],
         },
-        // Commerce and Humanities streams would follow
       ],
     },
   ],
 
-  // Comprehensive Fee Structure
+  // Updated Fee Structure with Dynamic Totals (Using Getters)
   feeStructure: {
     kindergarten: [
       {
         level: "Pre-Kindergarten",
-        admission: "₹15,000",
-        tuition: "₹4,500",
-        activity: "₹2,000",
-        total: "₹70,000",
+        admission: 15000,
+        tuition: 4500,
+        activity: 2000,
+        get total() {
+          return this.admission + this.tuition + this.activity;
+        },
       },
       {
         level: "Kindergarten",
-        admission: "₹15,000",
-        tuition: "₹5,000",
-        activity: "₹2,500",
-        total: "₹77,000",
+        admission: 15000,
+        tuition: 5000,
+        activity: 2500,
+        get total() {
+          return this.admission + this.tuition + this.activity;
+        },
       },
     ],
     primary: [
       {
         grade: 1,
-        admission: "₹20,000",
-        tuition: "₹5,500",
-        booksUniform: "₹8,000",
-        total: "₹86,000",
+        admission: 20000,
+        tuition: 5500,
+        booksUniform: 8000,
+        get total() {
+          return this.admission + this.tuition + this.booksUniform;
+        },
       },
-      // Grades 2-5 would follow
     ],
     middle: [
       {
         grade: 6,
-        admission: "₹25,000",
-        tuition: "₹6,500",
-        labFee: "₹3,000",
-        total: "₹1,03,000",
+        admission: 25000,
+        tuition: 6500,
+        labFee: 3000,
+        get total() {
+          return this.admission + this.tuition + this.labFee;
+        },
       },
-      // Grades 7-8 would follow
     ],
     highSchool: [
       {
@@ -193,10 +196,12 @@ const curriculumData = {
         fees: [
           {
             stream: "General Stream",
-            admission: "₹30,000",
-            tuition: "₹7,500",
-            exam: "₹5,000",
-            total: "₹1,20,000",
+            admission: 30000,
+            tuition: 7500,
+            exam: 5000,
+            get total() {
+              return this.admission + this.tuition + this.exam;
+            },
           },
         ],
       },
@@ -206,12 +211,31 @@ const curriculumData = {
         fees: [
           {
             stream: "Science Stream",
-            admission: "₹35,000",
-            tuition: "₹8,500",
-            exam: "₹6,000",
-            total: "₹1,37,000",
+            admission: 35000,
+            tuition: 8500,
+            exam: 6000,
+            get total() {
+              return this.admission + this.tuition + this.exam;
+            },
           },
-          // Commerce and Humanities would follow
+          {
+            stream: "Commerce Stream",
+            admission: 35000,
+            tuition: 8000,
+            exam: 5500,
+            get total() {
+              return this.admission + this.tuition + this.exam;
+            },
+          },
+          {
+            stream: "Humanities Stream",
+            admission: 35000,
+            tuition: 7500,
+            exam: 5000,
+            get total() {
+              return this.admission + this.tuition + this.exam;
+            },
+          },
         ],
       },
     ],

@@ -14,8 +14,8 @@ export const footerData = {
     email: "sfsDaili.edu.in",
   },
   quickLinks: [
-    { title: "About Us", url: "/about" },
-    { title: "Admissions", url: "/admissions" },
+    { title: "About Us", url: "#about-us" },
+    { title: "Admissions", url: "#Curriculum" },
     { title: "Contact", url: "/contact" },
     { title: "Student Results", url: "/results" },
   ],

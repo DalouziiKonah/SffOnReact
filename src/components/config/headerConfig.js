@@ -3,14 +3,14 @@
 export const headerConfig = {
   brand: {
     imgURL: "/src/assets/logo.svg",
-    name: "SFS HR.Secondary School Daili Kangpokpi",
+    name: "SFS HR.Secondary School Daili Village Kangpokpi",
   },
   navItems: {
     main: [
       { id: "Curriculum", label: "Curriculum", href: "#Curriculum" },
       { id: "about", label: "About", href: "#about-us" },
       { id: "staff", label: "Staff", href: "#staff" },
-      { id: "Fees", label: "Fee", href: "#fees" },
+      { id: "Contact", label: "Contact", href: "/contact" },
       { id: "services", label: "Services", href: "#services" },
       {
         id: "facilities",
