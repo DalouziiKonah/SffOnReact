@@ -16,14 +16,16 @@ import Curriculum from './components/Curriculum.jsx';
 
   function App(){
     return (
-      <div>
-       <Header /> 
-       <Marquee />
+      <div className="App">
+       <Header />
+       <main>
+        <Marquee />
         <Carousel />
         <WelcomeMsg messages={WelcomeConfig}/>
         <AboutUs config={AboutUsConfig} />
         <Curriculum />
         <Gallery GalleryConfig={GalleryConfig} />
+       </main>
        <Footer />
       </div>
    

@@ -25,8 +25,8 @@ const AboutUs = ({ config }) => {
     {/* Header Section */}
     <Row className="text-center mb-5">
         <Col>
-          <h1 className="display-4 fw-bold mb-3 text-light">{title}</h1>
-          <p className="lead text-light">{subtitle}</p>
+          <h1 className="display-5 fw-bold mb-3 text-light">{title}</h1>
+          <p className="lead text-light px-1 px-md-0">{subtitle}</p>
         </Col>
       </Row>
 

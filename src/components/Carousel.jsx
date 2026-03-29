@@ -26,7 +26,7 @@ function Carousel() {
         ))}
       </div>
 
-      <div className="carousel-inner col-lg-6 text-lg-start text-center mb-lg-0">
+      <div className="carousel-inner">
         {images.map((img, index) => (
           <div
             className={`carousel-item ${img.active ? 'active' : ''}`}
@@ -36,12 +36,12 @@ function Carousel() {
           </div>
         ))}
 
-        <div className="carousel-caption d-md-block position-absolute top-50 translate-middle-y p-3 text-start ms-5 ms-3">
+        <div className="carousel-caption carousel-caption-responsive position-absolute p-2 p-md-3 text-start text-white">
           <h1
-            className="welcome-text fw-bold fs-3 fs-md-1 gleaming-text"
+            className="welcome-text fw-bold gleaming-text mb-1 mb-md-2"
             dangerouslySetInnerHTML={{ __html: caption.heading }}
           />
-          <p className="p1 fs-6 fs-md-4">{caption.subheading}</p>
+          <p className="carousel-sublead mb-0">{caption.subheading}</p>
         </div>
       </div>
 

@@ -8,17 +8,33 @@ function Header() {
 
   return (
     <header className="header" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50" tabIndex="0">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary py-3 sticky-top">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary py-2 py-md-3 sticky-top">
         <div className="container-fluid">
-        <div className="text-center text-md-start w-100">
-        <a href="index.html">
-            <img src={brand.imgURL} alt="school logo" className="rounded-circle ms-2"  width="80" height="80" />
+          <a
+            className="navbar-brand d-flex align-items-center gap-2 gap-md-3 min-w-0 me-2"
+            href="index.html"
+          >
+            <img
+              src={brand.imgURL}
+              alt="school logo"
+              className="rounded-circle flex-shrink-0"
+              width="64"
+              height="64"
+            />
+            <span className="navbar-school-name text-uppercase fw-bold text-start lh-sm">
+              {brand.name}
+            </span>
           </a>
-        </div>
-         
-          <a className="navbar-brand text-uppercase text-center text-md w-100" href="index.html">{brand.name}</a>
-          
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+
+          <button
+            className="navbar-toggler flex-shrink-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span className="navbar-toggler-icon"></span>
           </button>
 

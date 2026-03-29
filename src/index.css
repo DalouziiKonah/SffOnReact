@@ -1,8 +1,10 @@
 #root{
-  padding: 2em 8px 1em 8px !important;
-  font-size: clamp(14px, 1vw, 20px);
- overflow-x: hidden;
-
+  padding: 1.25rem clamp(0.5rem, 3vw, 1.5rem) 1rem !important;
+  padding-left: max(0.5rem, env(safe-area-inset-left)) !important;
+  padding-right: max(0.5rem, env(safe-area-inset-right)) !important;
+  font-size: clamp(14px, 2.5vw, 18px);
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -31,7 +33,10 @@ a:hover {
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   background-color: #242424;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 #root,
@@ -45,7 +50,8 @@ body {
 /* ===== Main Content ===== */
 main {
   flex: 1;
-  padding-top: 70px; /* Space for fixed header */
+  /* Header offset: first section (.marquee-wrapper) uses margin-top */
+  padding-top: 0;
   position: relative;
   z-index: 1; /* behind the header */
   padding-left:0;
@@ -80,7 +86,14 @@ main {
 }
 .navbar-brand {
   color: rgb(235, 237, 245);
+  max-width: min(100%, calc(100vw - 5rem));
+}
 
+.navbar-school-name {
+  font-size: clamp(0.65rem, 2.8vw, 1rem);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 .navbar-nav a {
   color: rgb(235, 237, 245);
@@ -103,13 +116,15 @@ main {
 /* ===== Footer ===== */
 .footer {
   width: 100%;
-  height: 200px;
+  min-height: auto;
+  height: auto;
   bottom:0;
   z-index: 10;
   background-color: #1e1e1e;
   color: white;
   text-align: center;
   padding: 1rem;
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
 }
 
 /* ===== Carousel ===== */
@@ -131,15 +146,38 @@ main {
 }
 .carousel-inner img {
   width: 100%;
-  height: 400px;
+  height: clamp(220px, 45vh, 480px);
+  min-height: 200px;
   object-fit: cover;
 }
 
 .carousel-caption {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.55);
   border-radius: 8px;
   color: #fff;
-  max-width: 70%;
+  max-width: min(95%, 42rem);
+  left: 0.75rem;
+  right: auto;
+  bottom: 0.75rem;
+  top: auto;
+  transform: none;
+}
+
+@media (min-width: 768px) {
+  .carousel-caption.carousel-caption-responsive {
+    left: 2rem;
+    right: 2rem;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 70%;
+  }
+}
+
+.carousel-sublead {
+  font-size: clamp(0.8rem, 2.5vw, 1.25rem);
+  line-height: 1.35;
+  opacity: 0.95;
 }
 
 .carousel-indicators [data-bs-target] {
@@ -159,57 +197,30 @@ main {
 }
 
 .welcome-text {
-  font-size: 2rem;
+  font-size: clamp(1.1rem, 4.5vw, 2.25rem);
+  line-height: 1.15;
 }
 
 /* ===== Responsive ===== */
 
-@media (max-width: 769px) {
+@media (max-width: 991.98px) {
   .header .navbar-collapse {
-    height: 40vh;
-    position: relative;
+    max-height: min(70vh, 28rem);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
   }
-  button.navbar-toggler{
-    position:absolute;
-    top:10px;
-    right:10px;
-  }
-  button.navbar-toggler.collapsed{
-    position: absolute;
-    right:10px;
-    top: 10px;
-    margin:0;
-    display: flex;
-  }
-  .nav-bar {
-    position: fixed;
-  }
-  .header .navbar-brand {
-    font-size: small;
-    justify-content: center;
-    text-align: center;
-    left: 40%;
-  }
-  .container-fluid .rounded-cicle {
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    transform: translateX(-50%);
-    display: flex;
+}
+
+@media (max-width: 767.98px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 12%;
+    min-width: 2.75rem;
   }
 
-  .carousel-caption {
-    max-width: 100%;
-    font-size: 0.9rem;
-    padding: 0;
-    margin:0;
-   height: auto;
-  }
-
-  .welcome-text {
-    font-size: 1.5rem;
+  .carousel-indicators {
+    margin-bottom: 0.35rem;
   }
 }
 
@@ -228,7 +239,7 @@ main {
 }
 /* Marquee */
 .marquee-wrapper {
-  margin-top: 80px;
+  margin-top: clamp(4.5rem, 14vw, 5.25rem);
   z-index: 1045;
   position: relative;
 }
@@ -265,13 +276,8 @@ main {
 }
 
 @media (max-width: 768px) {
-  .marquee-wrapper {
-    margin-top: 110px;
-    margin-bottom: 0;
-  }
-
   .marquee-text {
-    font-size: 0.85rem;
+    font-size: clamp(0.75rem, 3vw, 0.9rem);
     padding-left: 100%;
   }
 }
@@ -324,11 +330,15 @@ width: 100%;
 
 .gallery-filters {
   display: flex;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin: 1.5rem 0;
+}
+
+.gallery-filters .btn {
+  min-height: 2.75rem;
 }
 
 .filter-btn {
@@ -428,15 +438,14 @@ width: 100%;
 /* Lightbox Styles */
 .lightbox {
   position: fixed;
-  top: 100px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  inset: 0;
+  top: 0;
+  padding: max(0.5rem, env(safe-area-inset-top)) max(0.5rem, env(safe-area-inset-right)) max(0.5rem, env(safe-area-inset-bottom)) max(0.5rem, env(safe-area-inset-left));
+  background: rgba(0, 0, 0, 0.92);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 1055;
 }
 
 .lightbox-content {
@@ -468,21 +477,45 @@ width: 100%;
 }
 
 .close-btn {
-  top: 20px;
-  right: 20px;
+  top: max(0.75rem, env(safe-area-inset-top));
+  right: max(0.75rem, env(safe-area-inset-right));
+  z-index: 2;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-btn {
   top: 50%;
   transform: translateY(-50%);
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  z-index: 2;
 }
 
 .prev {
-  left: 20px;
+  left: max(0.5rem, env(safe-area-inset-left));
 }
 
 .next {
-  right: 20px;
+  right: max(0.5rem, env(safe-area-inset-right));
+}
+
+@media (max-width: 575.98px) {
+  .nav-btn.prev,
+  .nav-btn.next {
+    top: auto;
+    bottom: 1rem;
+    transform: none;
+  }
+  .nav-btn.prev {
+    left: 25%;
+  }
+  .nav-btn.next {
+    right: 25%;
+  }
 }
 /* Check the layout with the outline.*/
 /* *{
@@ -514,4 +547,23 @@ width: 100%;
     transparent 100%
   );
 }
+/* Curriculum: scrollable tab strip on narrow screens */
+.curriculum-tabs-wrapper .nav-tabs {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  gap: 0.25rem;
+  scrollbar-width: thin;
+}
+
+.curriculum-tabs-wrapper .nav-item .nav-link {
+  white-space: nowrap;
+}
+
+.curriculum-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /*curriculum*/

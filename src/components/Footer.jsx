@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <footer className="footer bg-dark text-light pt-5 pb-4 mt-5">
-      <div className="container text-md-left">
+      <div className="container text-center text-md-start">
         <div className="row">
           {/* School Info */}
           <div className="col-md-4 mb-4">

@@ -15,7 +15,8 @@ const Curriculum = () => {
       <div className="bg-white rounded-4 shadow-sm p-3 p-md-4 mb-5">
         <h2 className="h3 fw-bold text-dark mb-4">All Grade Levels</h2>
         
-        <Tabs defaultActiveKey="primary" id="grade-tabs" className="mb-4">
+        <div className="curriculum-tabs-wrapper mb-4">
+        <Tabs defaultActiveKey="primary" id="grade-tabs">
           {/* Kindergarten Section */}
           <Tab eventKey="kindergarten" title="Kindergarten">
             <div className="row g-4 mt-3">
@@ -152,6 +153,7 @@ const Curriculum = () => {
             </Tab>
           ))}
         </Tabs>
+        </div>
       </div>
 
       {/* Comprehensive Fee Structure */}
